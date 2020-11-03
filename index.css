@@ -1,0 +1,238 @@
+#grid-wrapper {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+    margin: 0 auto;
+    font-family: 'Kosugi Maru', sans-serif;
+    color: rgb(61, 61, 61);
+}
+
+/* Header Header Header Header Header  */
+
+header {
+    grid-column: span 2;
+    display: flex;
+    background-color: #A84343;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#header-img {
+    max-height: 50px;
+    width: auto;
+    border-radius: 10px;
+}
+
+#m-and-t {
+    font-size: x-large;
+}
+
+nav {
+    justify-content: space-around;
+}
+
+.nav-link {
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 20px 0 0 20px;
+}
+
+/* WHOLE PAGE SETTINGS */
+
+h1, h2, h3 {
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+p, input, textarea {
+    font-size: small;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+/* MAIN GRID BLOCK - THE-WHY  */
+
+.main {
+    grid-area: 3/1/7/2;
+    background-color: cyan;
+    border-radius: 10px;
+}
+
+.row h2 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.row p {
+    text-align: justify;
+}
+
+.the-why {
+    padding: 20px;
+}
+
+/* MAIN 3 SECTION - BIOGRAPHY AND VIDEO  */
+
+.main3 {
+    grid-area: 7/1/10/2;
+    background-color: #c06e6e;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.biography p {
+    text-align: justify;
+}
+
+iframe {
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+/* MAIN 2 SECTION - RIGHT BOTTOM SIDEBAR - PRICING  */
+
+.main2 {
+    grid-area: 7/2/10/3;
+    background-color: cyan;
+    border-radius: 10px;
+}
+
+#price-disclaimer {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.nested-pricing {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: auto;
+    grid-gap: 5px;
+    margin: 20px;
+}
+
+.lesson-types {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.lesson-types h3 {
+    font-size: large;
+    padding-bottom: 10px;
+}
+
+/* SIDEBAR SECTION - TOP RIGHT - APPLICATION  */
+
+.sidebar {
+    grid-area: 3/2/7/3;
+    background-color: #c06e6e;
+    border-radius: 10px;
+}
+
+.application h2 {
+    text-align: center;
+}
+
+form {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+}
+
+label {
+    text-align: left;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    padding-top: 5px;
+}
+
+input, textarea {
+    border: 1px solid #111111;
+    border-radius: 10px;
+}
+
+button #submit {
+    justify-content: center;
+}
+
+/* Footer footer footer footer */
+
+footer {
+    grid-area: 10/1/11/3;
+    background-color: #A84343;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+footer a {
+    color: white;
+}
+
+footer p {
+    font-size: small;
+}
+
+@media all and (max-width: 1024px) {
+    #grid-wrapper h2 {
+        font-size: 1.5rem;
+    }
+    #grid-wrapper p, input, textarea {
+        font-size: .7rem;
+    }
+    .nested-pricing {
+        display: block;
+        grid-gap: 5px;
+    }
+    .lesson-types {
+        margin-bottom: 5px;
+    }
+    form {
+        display: block;
+        padding: 5px;
+    }
+    label {
+        font-size: x-small;
+    }
+    input::placeholder, textarea::placeholder, .form-control {
+        font-size: x-small;
+    }
+    .input-fields {
+        width: 100px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #grid-wrapper {
+        display: block;
+        margin-bottom: 20px;
+    }
+    #grid-wrapper h2 {
+        font-size: 1rem;
+    }
+    #grid-wrapper p, input, textarea {
+        font-size: .6rem;
+    }
+    .header, .main, .main3, .main2, .sidebar {
+        margin-bottom: 50px;
+    }
+}
